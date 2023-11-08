@@ -1,0 +1,19 @@
+{% extends "master.html" %}
+
+{% block title %}
+  Details about {{ botdetails.MeetingTitle }} {{ botdetails.RetentionEnd }}
+{% endblock %}
+
+
+{% block content %}
+  <h1>{{ botdetails.MeetingTitle }} {{ botdetails.RetentionEnd }}</h1>
+  
+  <p>Bot ID {{ botdetails.BotID }}</p>
+  <a href= {{ botdetails.VideoURL}}>Video Recording Link </a>
+  <li><a href="{{ botdetails.BotID }}/transcription">Meeting Transcript</a></li>
+
+  
+  <p>Back to <a href="/allbots">All Recordings</a></p>
+  
+{% endblock %}
+

@@ -1,0 +1,16 @@
+{% extends "master.html" %}
+
+{% block title %}
+  Recall.ai Demo App - List of all bots
+{% endblock %}
+
+
+{% block content %}
+  <h1>Bots</h1>  
+  <ul>
+    {% for x in botslist %}
+      <li><a href="details/{{ x.BotID}}">{{ x.MeetingTitle}} {{ x.CreateTime }}</a></li>
+    {% endfor %}
+  </ul>
+{% endblock %}
+

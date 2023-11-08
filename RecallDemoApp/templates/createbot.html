@@ -1,0 +1,16 @@
+{% extends "master.html" %}
+
+{% block title %}
+  Create a New Recording Bot
+{% endblock %}
+
+{% block content %}
+  <h1>Meeting Details</h1>
+    <form action="/createbot/" method="post">
+      {% csrf_token %}
+      {{ form }}
+      <input type="submit" value="Submit">
+    </form>
+{% endblock %}
+
+ 

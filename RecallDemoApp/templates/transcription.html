@@ -1,0 +1,17 @@
+{% extends "master.html" %}
+
+{% block title %}
+Call Transcription
+{% endblock %}
+
+{% block content %}
+  <h1>Call Transcription</h1>
+
+  <ul>
+    {% for x in transcription %}
+      <li>{{ x.Speaker}}: {{x.Message}}</li> 
+    {% endfor %}
+  </ul>
+  <p><a href="/allbots">All Recordings</a></p>
+{% endblock %}
+
